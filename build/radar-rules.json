@@ -1071,7 +1071,7 @@
     ]
   },
   "acs.org": {
-    "_name": "Unknown",
+    "_name": "ACS Publications",
     "pubs": [
       {
         "title": "Unknown",
@@ -3245,6 +3245,19 @@
       }
     ]
   },
+  "baoyu.io": {
+    "_name": "宝玉",
+    ".": [
+      {
+        "title": "Blog",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/"
+        ],
+        "target": "/baoyu/blog"
+      }
+    ]
+  },
   "baozimh.com": {
     "_name": "包子漫画",
     "www": [
@@ -4251,13 +4264,12 @@
     "_name": "C114 通信网",
     ".": [
       {
-        "title": "滚动新闻",
+        "title": "滚动资讯",
         "docs": "https://docs.rsshub.app/routes/new-media",
         "source": [
-          "/news/roll.asp",
-          "/"
+          "/news/roll.asp"
         ],
-        "target": "/c114/roll"
+        "target": "/c114(_,url)=>{url=new URL(url);const original=url.searchParams.get(\"o\");return`/roll${original?`/${original}`:\"\"}`}"
       }
     ]
   },
@@ -5960,7 +5972,7 @@
     ]
   },
   "chlinlearn.top": {
-    "_name": "chlinlearn的技术博客",
+    "_name": "chlinlearn 的技术博客",
     "daily-blog": [
       {
         "title": "值得一读技术博客",
@@ -6468,6 +6480,107 @@
       }
     ]
   },
+  "cngold.org.cn": {
+    "_name": "中国黄金协会",
+    "www": [
+      {
+        "title": "分类",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/:category"
+        ],
+        "target": "/cngoldparams=>{const category=params.category;return category?`/${category}`:\"\"}"
+      },
+      {
+        "title": "政策法规 - 法律法规",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/policies-245.html"
+        ],
+        "target": "/cngold/policies-245"
+      },
+      {
+        "title": "政策法规 - 产业政策",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/policies-262.html"
+        ],
+        "target": "/cngold/policies-262"
+      },
+      {
+        "title": "政策法规 - 黄金标准",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/policies-281.html"
+        ],
+        "target": "/cngold/policies-281"
+      },
+      {
+        "title": "行业培训 - 黄金投资分析师",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/training-242.html"
+        ],
+        "target": "/cngold/training-242"
+      },
+      {
+        "title": "行业培训 - 教育部1+X",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/training-246.html"
+        ],
+        "target": "/cngold/training-246"
+      },
+      {
+        "title": "行业培训 - 矿业权评估师",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/training-338.html"
+        ],
+        "target": "/cngold/training-338"
+      },
+      {
+        "title": "行业培训 - 其他培训",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/training-247.html"
+        ],
+        "target": "/cngold/training-247"
+      },
+      {
+        "title": "黄金科技 - 黄金协会科学技术奖",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/technology-318.html"
+        ],
+        "target": "/cngold/technology-318"
+      },
+      {
+        "title": "黄金科技 - 科学成果评价",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/technology-319.html"
+        ],
+        "target": "/cngold/technology-319"
+      },
+      {
+        "title": "黄金科技 - 新技术推广",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/technology-320.html"
+        ],
+        "target": "/cngold/technology-320"
+      },
+      {
+        "title": "黄金科技 - 黄金技术大会",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/technology-350.html"
+        ],
+        "target": "/cngold/technology-350"
+      }
+    ]
+  },
   "cnki.net": {
     "_name": "中国知网",
     "navi": [
@@ -6591,7 +6704,7 @@
       }
     ]
   },
-  "coomer.party": {
+  "coomer.su": {
     "_name": "Coomer",
     ".": [
       {
@@ -6624,6 +6737,19 @@
           "/"
         ],
         "target": "/copernicium/:category"
+      }
+    ]
+  },
+  "counter-strike.net": {
+    "_name": "Counter Strike",
+    "www": [
+      {
+        "title": "News",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/news/:category"
+        ],
+        "target": "/counter-strike(params,url)=>{url=new URL(url);const category=params.category;const language=url.searchParams.get(\"l\");return`/news${category?`/${category}${language?`/${language}`:\"\"}`:\"\"}`}"
       }
     ]
   },
@@ -8275,6 +8401,19 @@
       }
     ]
   },
+  "enterprisecraftsmanship.com": {
+    "_name": "Enterprise Craftsmanship",
+    ".": [
+      {
+        "title": "Archives",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/archives/"
+        ],
+        "target": "/enterprisecraftsmanship/archives"
+      }
+    ]
+  },
   "epicgames.com": {
     "_name": "Epic Games Store",
     "store": [
@@ -8626,7 +8765,7 @@
     ]
   },
   "sdo.com": {
-    "_name": "FINAL FANTASY XIV 最终幻想 14",
+    "_name": "FINAL FANTASY XIV",
     "ff.web": [
       {
         "title": "最终幻想 14 国服",
@@ -8810,6 +8949,19 @@
           "/"
         ],
         "target": "/flyert/preferential"
+      }
+    ]
+  },
+  "flyert.com.cn": {
+    "_name": "飞客茶馆",
+    "www": [
+      {
+        "title": "会员说",
+        "docs": "https://docs.rsshub.app/routes/bbs",
+        "source": [
+          "/forum.php"
+        ],
+        "target": "/flyert(_,url)=>{const params=[...url.searchParams.entries()].map(([key,value])=>key+\"=\"+value).join(\"&\");return`/forum${params?`/${encodeURIComponent(params)}`:\"\"}`}"
       }
     ]
   },
@@ -12450,6 +12602,19 @@
       }
     ]
   },
+  "hamel.dev": {
+    "_name": "Hamel's Blog",
+    ".": [
+      {
+        "title": "Blog",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/"
+        ],
+        "target": "/hamel/blog"
+      }
+    ]
+  },
   "syosetu.org": {
     "_name": "hameln",
     ".": [
@@ -14610,7 +14775,7 @@
     ]
   },
   "infzm.com": {
-    "_name": "infzm",
+    "_name": "南方周末",
     ".": [
       {
         "title": "热门文章",
@@ -14806,19 +14971,6 @@
           "/report.shtml"
         ],
         "target": "/iresearch/report"
-      }
-    ]
-  },
-  "isct.ac.jp": {
-    "_name": "Institute of Science Tokyo",
-    "www": [
-      {
-        "title": "News",
-        "docs": "https://docs.rsshub.app/routes/university",
-        "source": [
-          "/:lang/news"
-        ],
-        "target": "/isct/news/:lang"
       }
     ]
   },
@@ -15195,6 +15347,17 @@
           "/xwzx/zsjy.htm"
         ],
         "target": "/jlu/ccst/xwzx/:category"
+      }
+    ],
+    "phy": [
+      {
+        "title": "物理学院",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/:category/:column",
+          "/:category/:column/:subcolumn"
+        ],
+        "target": "/jlu/phy/:category/:column/:subcolumn?"
       }
     ]
   },
@@ -15757,6 +15920,19 @@
       }
     ]
   },
+  "langchain.dev": {
+    "_name": "LangChain Blog",
+    "blog": [
+      {
+        "title": "Blog",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/"
+        ],
+        "target": "/langchain/blog"
+      }
+    ]
+  },
   "lanqiao.cn": {
     "_name": "蓝桥云课",
     ".": [
@@ -16020,7 +16196,7 @@
     ]
   },
   "linkedin.com": {
-    "_name": "LinkedIn 领英",
+    "_name": "LinkedIn",
     "www": [
       {
         "title": "Jobs",
@@ -16473,7 +16649,7 @@
     ]
   },
   "malaysiakini.com": {
-    "_name": "Malaysiakini 当今大马",
+    "_name": "Malaysiakini",
     ".": [
       {
         "title": "News",
@@ -19603,7 +19779,7 @@
     ]
   },
   "nationalgeographic.com": {
-    "_name": "国家地理",
+    "_name": "National Geographic",
     ".": [
       {
         "title": "Daily Photo",
@@ -19635,7 +19811,7 @@
     ]
   },
   "natgeomedia.com": {
-    "_name": "国家地理",
+    "_name": "National Geographic",
     ".": [
       {
         "title": "分类",
@@ -20515,6 +20691,19 @@
       }
     ]
   },
+  "nielsberglund.com": {
+    "_name": "Niels Berglund Blog",
+    ".": [
+      {
+        "title": "Blog",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/"
+        ],
+        "target": "/nielsberglund/blog"
+      }
+    ]
+  },
   "nikkei.com": {
     "_name": "The Nikkei 日本経済新聞",
     "www": [
@@ -21215,6 +21404,14 @@
           "/"
         ],
         "target": "/nytimes/:lang?"
+      },
+      {
+        "title": "News",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/"
+        ],
+        "target": "/nytimes/rss/:cat?"
       }
     ]
   },
@@ -21361,7 +21558,7 @@
     ]
   },
   "openwrt.org": {
-    "_name": "Unknown",
+    "_name": "OpenWrt",
     ".": [
       {
         "title": "Unknown",
@@ -22726,6 +22923,35 @@
           "/"
         ],
         "target": "/qust/jw"
+      }
+    ]
+  },
+  "qztc.edu.cn": {
+    "_name": "泉州师范学院",
+    "www": [
+      {
+        "title": "首页",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/:type/list.htm"
+        ],
+        "target": "/qztc/home/:type"
+      },
+      {
+        "title": "教务处",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/jwc/:type/list.htm"
+        ],
+        "target": "/qztc/jwc/:type"
+      },
+      {
+        "title": "数学与计算机科学学院 软件学院",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/sjxy/:type/list.htm"
+        ],
+        "target": "/qztc/sjxy/:type"
       }
     ]
   },
@@ -26200,7 +26426,7 @@
     ]
   },
   "taiwannews.com.tw": {
-    "_name": "Taiwan News 台灣英文新聞",
+    "_name": "Taiwan News",
     ".": [
       {
         "title": "Hot News",
@@ -26563,6 +26789,19 @@
           "/newsflash"
         ],
         "target": "/theblockbeats/newsflash"
+      }
+    ]
+  },
+  "thegradient.pub": {
+    "_name": "The Gradient",
+    ".": [
+      {
+        "title": "Posts",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/"
+        ],
+        "target": "/thegradient/posts"
       }
     ]
   },
@@ -27294,7 +27533,7 @@
     ]
   },
   "uber.com": {
-    "_name": "Uber 优步",
+    "_name": "Uber",
     "www": [
       {
         "title": "Engineering",
@@ -27881,7 +28120,7 @@
     ]
   },
   "vom.mn": {
-    "_name": "Voice of Mongolia 蒙古之声",
+    "_name": "Voice of Mongolia",
     ".": [
       {
         "title": "News",
