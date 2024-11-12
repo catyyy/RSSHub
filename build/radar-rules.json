@@ -1119,6 +1119,28 @@
       }
     ]
   },
+  "afr.com": {
+    "_name": "The Australian Financial Review",
+    "www": [
+      {
+        "title": "Latest",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/latest",
+          "/"
+        ],
+        "target": "/afr/latest"
+      },
+      {
+        "title": "Navigation",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/path*"
+        ],
+        "target": "/afr/navigation/:path{.+}"
+      }
+    ]
+  },
   "agemys.org": {
     "_name": "AGE 动漫",
     ".": [
@@ -4302,6 +4324,19 @@
       }
     ]
   },
+  "cags.ac.cn": {
+    "_name": "Chinese Academy of Geological Sciences",
+    "edu": [
+      {
+        "title": "研究生院",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/"
+        ],
+        "target": "/cags/edu/:category"
+      }
+    ]
+  },
   "cahkms.org": {
     "_name": "全国港澳研究会",
     ".": [
@@ -7249,12 +7284,12 @@
   },
   "daily.dev": {
     "_name": "Daily.dev",
-    ".": [
+    "app": [
       {
         "title": "Most Discussed",
         "docs": "https://docs.rsshub.app/routes/social-media",
         "source": [
-          "/popular"
+          "/discussed"
         ],
         "target": "/daily/discussed"
       },
@@ -7267,10 +7302,18 @@
         "target": "/daily/"
       },
       {
+        "title": "Source Posts",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/sources/:sourceId"
+        ],
+        "target": "/daily/source/:sourceId"
+      },
+      {
         "title": "Most upvoted",
         "docs": "https://docs.rsshub.app/routes/social-media",
         "source": [
-          "/popular"
+          "/upvoted"
         ],
         "target": "/daily/upvoted"
       },
@@ -7499,16 +7542,168 @@
     ]
   },
   "deeplearning.ai": {
-    "_name": "deeplearning.ai",
+    "_name": "DeepLearning.AI",
     "www": [
       {
-        "title": "TheBatch 周报",
+        "title": "The Batch",
         "docs": "https://docs.rsshub.app/routes/programming",
         "source": [
-          "/thebatch",
-          "/"
+          "/the-batch",
+          "/the-batch/tag/:tag/"
         ],
-        "target": "/deeplearning/thebatch"
+        "target": "/deeplearningparams=>{const tag=params.tag;return`/the-batch${tag?`/${tag}`:\"\"}`}"
+      },
+      {
+        "title": "Weekly Issues",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/"
+        ],
+        "target": "/deeplearning/the-batch"
+      },
+      {
+        "title": "Andrew's Letters",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/letters/"
+        ],
+        "target": "/deeplearning/the-batch/letters"
+      },
+      {
+        "title": "Data Points",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/data-points/"
+        ],
+        "target": "/deeplearning/the-batch/data-points"
+      },
+      {
+        "title": "ML Research",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/research/"
+        ],
+        "target": "/deeplearning/the-batch/research"
+      },
+      {
+        "title": "Business",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/business/"
+        ],
+        "target": "/deeplearning/the-batch/business"
+      },
+      {
+        "title": "Science",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/science/"
+        ],
+        "target": "/deeplearning/the-batch/science"
+      },
+      {
+        "title": "AI & Society",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/ai-society/"
+        ],
+        "target": "/deeplearning/the-batch/ai-society"
+      },
+      {
+        "title": "Culture",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/culture/"
+        ],
+        "target": "/deeplearning/the-batch/culture"
+      },
+      {
+        "title": "Hardware",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/hardware/"
+        ],
+        "target": "/deeplearning/the-batch/hardware"
+      },
+      {
+        "title": "AI Careers",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/ai-careers/"
+        ],
+        "target": "/deeplearning/the-batch/ai-careers"
+      },
+      {
+        "title": "Letters from Andrew Ng - All",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/letters/"
+        ],
+        "target": "/deeplearning/the-batch/letters"
+      },
+      {
+        "title": "Letters from Andrew Ng - Personal Insights",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/personal-insights/"
+        ],
+        "target": "/deeplearning/the-batch/personal-insights"
+      },
+      {
+        "title": "Letters from Andrew Ng - Technical Insights",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/technical-insights/"
+        ],
+        "target": "/deeplearning/the-batch/technical-insights"
+      },
+      {
+        "title": "Letters from Andrew Ng - Business Insights",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/business-insights/"
+        ],
+        "target": "/deeplearning/the-batch/business-insights"
+      },
+      {
+        "title": "Letters from Andrew Ng - Tech & Society",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/tech-society/"
+        ],
+        "target": "/deeplearning/the-batch/tech-society"
+      },
+      {
+        "title": "Letters from Andrew Ng - DeepLearning.AI News",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/deeplearning-ai-news/"
+        ],
+        "target": "/deeplearning/the-batch/deeplearning-ai-news"
+      },
+      {
+        "title": "Letters from Andrew Ng - AI Careers",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/ai-careers/"
+        ],
+        "target": "/deeplearning/the-batch/ai-careers"
+      },
+      {
+        "title": "Letters from Andrew Ng - Just For Fun",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/just-for-fun/"
+        ],
+        "target": "/deeplearning/the-batch/just-for-fun"
+      },
+      {
+        "title": "Letters from Andrew Ng - Learning & Education",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/learning-education/"
+        ],
+        "target": "/deeplearning/the-batch/learning-education"
       }
     ]
   },
@@ -9178,6 +9373,131 @@
       }
     ]
   },
+  "furaffinity.net": {
+    "_name": "Furaffinity",
+    ".": [
+      {
+        "title": "Gallery",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/gallery/:username"
+        ],
+        "target": "/furaffinity/gallery/:username"
+      },
+      {
+        "title": "Gallery",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/scraps/:username"
+        ],
+        "target": "/furaffinity/scraps/:username"
+      },
+      {
+        "title": "Gallery",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/favorites/:username"
+        ],
+        "target": "/furaffinity/favorites/:username"
+      },
+      {
+        "title": "Browse",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/"
+        ],
+        "target": "/furaffinity/browse"
+      },
+      {
+        "title": "Commissions",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/commissions/:username"
+        ],
+        "target": "/furaffinity/commissions/:username"
+      },
+      {
+        "title": "Home",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/"
+        ],
+        "target": "/furaffinity/"
+      },
+      {
+        "title": "Journal Comments",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/journal/:id"
+        ],
+        "target": "/furaffinity/journal-comments/:id"
+      },
+      {
+        "title": "Journals",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/journals/:username"
+        ],
+        "target": "/furaffinity/journals/:username"
+      },
+      {
+        "title": "Search",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/"
+        ],
+        "target": "/furaffinity/search"
+      },
+      {
+        "title": "Shouts",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/user/:username"
+        ],
+        "target": "/furaffinity/shouts/:username"
+      },
+      {
+        "title": "Status",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/"
+        ],
+        "target": "/furaffinity/"
+      },
+      {
+        "title": "Submission Comments",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/view/:id"
+        ],
+        "target": "/furaffinity/submission-comments/:id"
+      },
+      {
+        "title": "Userpage",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/user/:username"
+        ],
+        "target": "/furaffinity/user/:username"
+      },
+      {
+        "title": "User's Watcher List",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/watchlist/to/:username"
+        ],
+        "target": "/furaffinity/watchers/:username"
+      },
+      {
+        "title": "User's Watching List",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/watchlist/by/:username"
+        ],
+        "target": "/furaffinity/watching/:username"
+      }
+    ]
+  },
   "furstar.jp": {
     "_name": "Furstar",
     ".": [
@@ -9895,6 +10215,19 @@
           "/"
         ],
         "target": "/gogoanimehd/recent-releases"
+      }
+    ]
+  },
+  "googleblog.com": {
+    "_name": "Google",
+    "developers": [
+      {
+        "title": "Developers Blog",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/"
+        ],
+        "target": "/google/developers/:locale?"
       }
     ]
   },
@@ -15978,6 +16311,20 @@
           "/personal/:id"
         ],
         "target": "/laohu8/personal/:id"
+      }
+    ]
+  },
+  "last-origin.com": {
+    "_name": "LastOrigin",
+    "www": [
+      {
+        "title": "News",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/news.html",
+          "/"
+        ],
+        "target": "/last-origin/news"
       }
     ]
   },
@@ -22128,12 +22475,30 @@
         "target": "/pixiv/user/illustfollows"
       },
       {
-        "title": "User Novels",
+        "title": "Novel Series",
         "docs": "https://docs.rsshub.app/routes/social-media",
         "source": [
-          "/users/:id/novels"
+          "/novel/series/:id"
+        ],
+        "target": "/pixiv/novel/series/:id"
+      },
+      {
+        "title": "User Novels (簡介 Basic info)",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/users/:id/novels",
+          "/users/:id"
         ],
         "target": "/pixiv/user/novels/:id"
+      },
+      {
+        "title": "User Novels (全文 Full text)",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/users/:id/novels",
+          "/users/:id"
+        ],
+        "target": "/pixiv/user/novels/:id/true"
       },
       {
         "title": "User Activity",
@@ -27240,6 +27605,19 @@
           "/"
         ],
         "target": "/topys/:keyword?"
+      }
+    ]
+  },
+  "toutiao.com": {
+    "_name": "今日头条",
+    "www": [
+      {
+        "title": "头条主页",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/c/user/token/:token"
+        ],
+        "target": "/toutiao/user/token/:token"
       }
     ]
   },
