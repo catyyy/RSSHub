@@ -42664,7 +42664,7 @@
         "categories": [
           "university"
         ],
-        "example": "/news/ja",
+        "example": "/isct/news/ja",
         "parameters": {
           "lang": "language, could be ja or en"
         },
